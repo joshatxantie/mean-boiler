@@ -1,15 +1,16 @@
-{
-  "title": "Mean Boiler",
-  "description": "This is a sample server for a pet store.",
-  "termsOfService": "http://example.com/terms/",
-  "contact": {
-    "name": "API Support",
-    "url": "http://www.example.com/support",
-    "email": "support@example.com"
-  },
-  "license": {
-    "name": "Apache 2.0",
-    "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
-  },
-  "version": "1.0.1"
-}
+apiDefinitions:
+# a set of named keys and values of entrypoints to OpenAPI 3 definitions.
+# example
+  petstore: ./openapi/openapi.yaml
+  caretaker: ./openapi/caretaker.yaml
+
+lint:
+# the lint options
+
+referenceDocs:
+# the API reference docs options, including theme options.
+
+registry:
+# the API registry options
+
+# future products may be configured by extending this file
