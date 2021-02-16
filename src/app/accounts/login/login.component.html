@@ -1,0 +1,68 @@
+<div class="alert alert-danger alert-dismissible" *ngIf="formErrors" role="alert">
+    <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+    {{formErrors}}
+</div>
+
+<div class="alert alert-success alert-dismissible" *ngIf="formSuccess" role="alert">
+    <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+    {{formSuccess}}
+</div>
+
+<div class="container-lg" *ngIf="view">
+    <form action="" [formGroup]="loginForm" (submit)="loginUser()" class="card p-3 offset-md-3 col-md-6 mt-md-5">
+        <h1 class="text-center">Login</h1>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" formControlName="username" class="form-control" placeholder="name@example.com" required email>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input type="password" formControlName="password" name="" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="hr-or">
+            <hr>
+            <span>OR</span>
+            <hr>
+        </div>
+        
+        <div class="links">
+            <a class="btn btn-link" (click)="view = !view">Register an Account</a>
+            <a class="btn btn-link">Forgot Password</a>
+        </div>
+    </form>
+</div>
+
+<div class="container-lg" *ngIf="!view">
+    <form action="" [formGroup]="registerForm" (submit)="registerUser()" class="card p-3 offset-md-3 col-md-6 mt-md-5">
+        <h1 class="text-center">Register</h1>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" formControlName="username" class="form-control" placeholder="name@example.com" required email>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input type="password" formControlName="password" name="" class="form-control"  required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">First Name</label>
+            <input type="text" formControlName="firstName" class="form-control" placeholder="John">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Last Name</label>
+            <input type="text" formControlName="lastName" name="" class="form-control" placeholder="Doe">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="hr-or">
+            <hr>
+            <span>OR</span>
+            <hr>
+        </div>
+        
+        <div class="links">
+            <a class="btn btn-link" (click)="view = !view">Login</a>
+        </div>
+    </form>
+</div>

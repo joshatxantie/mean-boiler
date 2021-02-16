@@ -1,0 +1,37 @@
+.hr-or {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+}
+
+.hr-or hr {
+    margin: 0px;
+    margin-top: 12px;
+    border-color: rgb(145, 145, 145);
+    width: 100%;
+}
+
+.hr-or span {
+    text-align: center;
+    color: rgb(145, 145, 145);
+}
+
+.links a {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid rgb(145, 145, 145);
+    margin: 5px;
+}
+
+@media (min-width: 845px) {
+    .links a {
+        display: inline;
+        margin: 0px;
+        border: none;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+    }
+}
